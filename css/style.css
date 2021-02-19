@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* 色 */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  background-image: url("../img/time.jpg");
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  color: #222222;
+}
+
+.all-wrap {
+  text-align: center;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 576px) {
+  .all-wrap {
+    padding-top: 20%;
+  }
+}
+
+.all-wrap .timer-wrap, .all-wrap .date-wrap {
+  padding: 0 10% 100px;
+}
+
+@media screen and (max-width: 576px) {
+  .all-wrap .timer-wrap, .all-wrap .date-wrap {
+    padding: 0 5px 100px;
+  }
+}
+
+.all-wrap .timer-wrap .title, .all-wrap .date-wrap .title {
+  font-size: 2.8rem;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .all-wrap .timer-wrap .title, .all-wrap .date-wrap .title {
+    font-size: 2.5rem;
+  }
+}
+
+.all-wrap .timer-wrap .countdown, .all-wrap .date-wrap .countdown {
+  font-size: 5rem;
+  padding: 20px;
+  background-color: #7fc97f;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 576px) {
+  .all-wrap .timer-wrap .countdown, .all-wrap .date-wrap .countdown {
+    font-size: 3rem;
+    padding: 10px;
+  }
+}
+
+.all-wrap .timer-wrap .content, .all-wrap .date-wrap .content {
+  font-size: 2.5rem;
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 576px) {
+  .all-wrap .timer-wrap .content, .all-wrap .date-wrap .content {
+    font-size: 2rem;
+  }
+}
+
+.all-wrap .timer-wrap .date-input, .all-wrap .date-wrap .date-input {
+  cursor: pointer;
+  font-size: 3rem;
+  padding: 12px 24px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (max-width: 576px) {
+  .all-wrap .timer-wrap .date-input, .all-wrap .date-wrap .date-input {
+    padding: 10px;
+  }
+}
+
+.all-wrap .timer-wrap .date-input:hover, .all-wrap .date-wrap .date-input:hover {
+  transform: translate3d(0px, -1px, 0px);
+  background-color: #d6e2ff;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.all-wrap .timer-wrap .input-countdown, .all-wrap .date-wrap .input-countdown {
+  font-size: 5rem;
+  padding: 20px;
+  background-color: #fe6767;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 576px) {
+  .all-wrap .timer-wrap .input-countdown, .all-wrap .date-wrap .input-countdown {
+    font-size: 3rem;
+  }
+}

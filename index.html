@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <title>2021年カウントダウン</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="all-wrap">
+            <div class="timer-wrap">
+                <p class="title">2021年が終わるまであと...</p>
+                <p class="countdown">{{countdown}}</p>
+            </div>
+            <div class="date-wrap">
+                <p class="title">誕生日を入力してね！</p>
+                <input v-model="date" type="date" class="date-input" size="4" @input="countDown">
+                <p class="content">{{content1}}</p>
+                <p class="input-countdown">{{inputCountdown}}</p>
+                <p class="content">{{content2}}</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/locale/ja.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

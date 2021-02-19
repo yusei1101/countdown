@@ -1,0 +1,99 @@
+//マップ型変数breakpointsを定義
+$breakpoints: (
+//キー　　値
+ 'sm': 'screen and (max-width: 576px)',
+ 'md': 'screen and (min-width: 768px)',
+ 'lg': 'screen and (min-width: 992px)',
+ 'xl': 'screen and (min-width: 1200px)'
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+/* 色 */
+$color-black: #3E3E3E;
+$color-white: #FFFFFF;
+$color-text: #222222;
+
+// font-sizeがわかりやすくなる。
+html{
+  font-size:62.5%;
+}
+
+body{
+  font-family:'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  background-image: url('../img/time.jpg');
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  color: $color-text;
+}
+
+.all-wrap{
+  text-align: center;
+  padding-top: 50px;
+  @include mq(sm){
+    padding-top: 20%;
+  }
+  .timer-wrap, .date-wrap{
+    padding:0 10% 100px;
+    @include mq(sm){
+      padding: 0 5px 100px;   
+    }
+    .title{
+      font-size: 2.8rem;
+      padding-bottom: 20px;
+      @include mq(sm){
+        font-size: 2.5rem;
+      }
+    }
+    .countdown{
+      font-size: 5rem;
+      padding: 20px;
+      background-color:rgb(127, 201, 127);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
+      @include mq(sm){
+        font-size: 3rem;
+        padding: 10px; 
+      }
+    }
+    .content{
+      font-size: 2.5rem;
+      padding: 20px 0;
+      @include mq(sm){
+        font-size: 2rem;
+      }
+    }
+    .date-input{
+      cursor: pointer;
+      font-size: 3rem;
+      padding: 12px 24px;
+      background-color: $color-white;
+      border-radius: 6px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+      box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+      @include mq(sm){
+        padding: 10px;
+      }
+      &:hover{
+        transform: translate3d(0px,-1px,0px);
+        background-color: hsl(222, 100%, 92%);
+        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+      }
+    }
+    .input-countdown{
+      font-size: 5rem;
+      padding: 20px;
+      background-color: rgb(254, 103, 103);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8);
+      @include mq(sm){
+        font-size: 3rem; 
+      }
+    }
+  }
+}
